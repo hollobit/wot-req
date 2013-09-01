@@ -133,9 +133,156 @@ Style guide to contributors:
   		<h2><a>Requirements</a></h2>
 
   		<p>The use cases give rise to the following requirements:</p>
- 		
+ 		<section>
+ 			<h3>General Requirements</h3>
+ 			<ol>
+			<li>The WoT System should support the various of web technology, web services and web resources
+			<li>All resources in the WoT systems shall be accessed by identification technology (e.g: URI, URL, IRI)  
+		</ol>
+		<section>
+			<h4>WoT Application principles</h4> 
+			<ol>
+				<li>The WoT Application shall be allowed to request the Device capabilities.
+				<li>The WoT System shall be able to allow communication between WoT Applications in the Network and Applications
+Domain, and the WoT enabled Device or WoT Gateway
+				<li>The WoT System should abstract the underlying network structure including any network addressing mechanism used, e.g. in case of an IP based network the session establishment shall be possible when IP static or dynamic addressing are used.
+			</ol>
+		</section>
+		
+		<section>
+			<h4>Message Delivery for sleeping devices</h4> 
+			<ol>
+				<li>The WoT System shall be able to manage communication towards a sleeping device.
+				</ol>
+			</section>
+
+		<section>
+			<h4>Message transmission scheduling</h4> 
+			<ol>
+				<li>The WoT System shall be able to manage the scheduling of network access and of messaging.
+				<li>The M2M System shall be aware of the scheduling delay tolerance of the WoT Application.
+				</ol>
+			</section>
+
+		<section>
+			<h4>Communication with devices behind a WoT gateway</h4>
+			<ol>
+				<li>The WoT System should be able to communicate with Devices behind a WoT gateway.
+			</ol>
+		</section>
+		
+		<section>
+			<h4>Communication failure notification</h4>
+			<ol>
+				<li>WoT Applications, requesting reliable delivery of a message, shall be notified of any failures to deliver the message.
+			</ol>
+		</section>
+		
+		<section>
+			<h4>Scalability</h4>
+			<ol>
+				<li>The WoT System shall be scalable in terms of number of WoT Resources.
+				</ol>
+			</section>
+
+		<section>
+			<h4>Abstraction of technologies heterogeneity</h4>
+			<ol>
+				<li>The WoT Gateway may be capable of interfacing to various WoT Area Network technologies.
+			<ol>
+			</section>
+			
+		<section>
+			<h4>WoT Service Capabilities discovery and registration</h4>
+			<ol>
+				<li>The WoT System shall support mechanisms to allow WoT Applications to discover WoT Service Capabilities offered to them.
+				<li>Additionally the WoT enabled Device and WoT Gateway shall support mechanisms to allow the registration of its WoT Service Capabilities to the WoT system.
+				</ol>
+			</section>
+	
+<!--
+== WoT Trusted Application == 
+
+* The WoT system may handle service request responses for trusted WoT Applications by allowing streamlined
+authentication procedures for these applications.
+
+* The WoT system may support trusted applications, that are applications pre-validated by the M2M system.
+
+== Mobility == 
+
+* If the underlying network supports seamless mobility and roaming, the WoT System shall be able to use such
+mechanisms.
+
+== Communications integrity == 
+
+* The WoT System shall be able to support mechanisms to assure communications integrity for WoT services.
+
+== Device/Gateway integrity check == 
+
+* The WoT System shall support WoT enabled Device and WoT Gateway integrity check.
+
+== Continuous connectivity == 
+
+* The WoT System shall support continuous connectivity, for WoT applications requesting the same WoT service on a regular and continuous basis. This continuous connectivity may be de-activated upon request of the Application or by an internal mechanism in the WoT system.
+
+== Confirm == 
+
+* The WoT System shall support mechanisms to confirm messages. A message may be unconfirmed, confirmed or
+transaction controlled.
+
+== Priority == 
+
+* The WoT System shall support the management of priority levels of the services and communications services.
+Ongoing communications may be interrupted in order to serve a flow with higher priority (i.e. pre-emption).
+
+== Logging == 
+
+* Messaging and transactions requiring non-repudiation shall be capable of being logged. 
+
+* Important events (e.g. received information from the WoT enabled Device or WoT Gateway is faulty, unsuccessful installation attempt from the WoT enabled Device or WoT Gateway, service not operating, etc.) may be logged together with diagnostic information. 
+
+* Logs shall be retrievable upon request.
+
+== Anonymity == 
+
+* The WoT System shall be able to support Anonymity. If anonymity is requested by an WoT Application from the
+WoT enabled Device side and the request is accepted by the network, the network infrastructure will hide the identity and the location of the requestor, subject to regulatory requirements.
+
+== Time Stamp == 
+
+* The WoT System shall be able to support accurate and secure and trusted time stamping. WoT enabled Devices and WoT Gateways may support accurate and secure and trusted time stamping.
+
+== Device/Gateway failure robustness == 
+
+After a non-destructive failure, e.g. after a power supply outage, a WoT enabled Device or Gateway should immediately return in a full operating state autonomously, after performing the appropriate initialization e.g. integrity check if supported.
+
+== Radio transmission activity indication and control == 
+
+* The radio transmitting parts (e.g. GSM/GPRS) of the WoT enabled Device/Gateway should be able to provide (if required by particular applications e.g. eHealth) a real-time indication of radio transmission activity to the application on the WoT enabled Device/Gateway, and may be instructed real-time by the application on the WoT enabled Device/Gateway to suspend/resume the radio transmission activity.
+
+== Operator telco capabilities exposure == 
+
+* The WoT interface to the external WoT applications shall enable the exposition of telco operator capabilities
+(e.g. SMS, USSD, localization, subscription configuration, authentication (e.g. Generic Bootstrapping Architecture), etc). 
+
+* The WoT service platform shall be able to provide access to non-WoT resources abstracted as WoT resources to
+provide to the applications a consistent use of the WoT capabilities.
+
+== Location reporting support == 
+
+* The WoT System shall be able to report WoT enabled Device/Gateway location to WoT applications when this information is available.
+
+= Management = 
+
+= Functional requirements for WoT services =
+
+= Security =
+-->
+ 				
+  	</section>
+
     @@TBD 
-    
+  
 	</section>
 
     <!-- - - - - - - - - Acknowledgements - - - - - - - - - - - - - - - - - -->
